@@ -1,0 +1,24 @@
+{% extends 'navbar.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+<h2>Register</h2>
+{% if messages %}
+    {% for i in messages %}
+        <h4 style="color:red">{{ i }}</h4>
+    {% endfor %}
+{% endif %}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" id="username" placeholder="Enter username:">
+    <input type="email" name="email" id="email" placeholder="Enter email:">
+    <input type="text" name="password" id="password" placeholder="Enter password:">
+    <input type="password" name="password1" id="password1" placeholder="confirm password:">
+    <div>
+    <button type="reset" class="reset_btn">Reset</button>
+    <button type="submit" class="delete_btn">Submit</button>
+</div>
+</form>
+
+{% endblock %}

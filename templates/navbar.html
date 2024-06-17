@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} iSolveBlog {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login_page' %}">Login</a></li>
+            <li><a href="{% url 'create_post' %}">Create Post</a></li>
+            <li><a href="{% url 'logout_page' %}" id="logout" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="block content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script>
+        function logout(){
+            alert("You have been loged out")
+        }
+    </script>
+</body>
+</html>

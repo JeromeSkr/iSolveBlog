@@ -1,0 +1,27 @@
+{% extends 'navbar.html' %}
+
+{% block title %} Home page {% endblock %}
+
+{% block content %}
+<h2>iBlog posts</h2>
+
+<ul>
+    {% for post in posts %}
+    <div class="blog_container">
+    <a href="{% url 'details' post.id %}" style="background-color: white;"><h3 class="title">{{ post.title }}</h3></a>
+    <p class>{{ post.content }}</p>
+    <small>By {{ post.author }} on {{post.timestamp}} </small>
+    </div>
+
+    {% if post.author == user %}
+    <div class="edit_div">
+    <a href="{% url 'edit_post' post.id %}" class="edit_post">Edit post</a>
+    <a href="{% url 'delete_post' post.id %}" class="delete_post">Delete post</a>
+    </div>
+    {% endif%}
+<br><br>
+    {% endfor %}
+    
+</ul>
+
+{% endblock %}

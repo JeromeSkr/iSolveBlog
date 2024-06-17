@@ -1,0 +1,12 @@
+{% extends 'navbar.html' %}
+
+{% block title %} Delete post {% endblock %}
+
+{% block content %}
+<h2>Delete post</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <h3 style="color: red;">Are you sure you want to delete the post?</h3>
+    <button type="submit" id="delete_button" name="delete_button" class="delete_btn">Delete</button>
+</form>
+{% endblock %}

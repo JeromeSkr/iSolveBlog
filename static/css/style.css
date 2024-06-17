@@ -1,0 +1,87 @@
+nav{
+    background-color: grey;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+
+}
+a:hover{
+    background-color: #575757;
+}
+
+form{
+    margin-left: 25% ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+input{
+    width: 300px;
+    height: 10px;
+    border: none;
+    background-color: #c4bfbf;
+    border-radius: 10px;
+    padding:10px;
+}
+textarea{
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+}
+button{
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+}
+h2{
+    color:black;
+    display: flex;
+    justify-content: center;
+}
+.blog_container{
+    border: 2px solid rgb(236, 186, 92);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.title{
+    display: inline;
+    background-color: rgb(247, 131, 89);
+    padding: 5px;
+    color:white
+}
+.edit_div{
+    display: flex;
+    justify-content: flex-start;
+}
+.edit_post,.delete_post{
+    height: 10px;
+    border-radius: 2px solid black;
+    color:black;
+    font-size: small;
+}
+.edit_post:hover{
+    background-color: rgb(228, 228, 103);
+}
+.delete_post:hover,.delete_btn:hover{
+    background-color: red;
+}
+.reset_btn,.submit_btn,.delete_btn{
+    height: 25px;
+}
+.reset_btn:hover{
+    background-color: rgb(161, 161, 155);
+}
+.submit_btn:hover{
+    background-color: rgb(30, 226, 30);
+}

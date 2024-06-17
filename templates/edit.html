@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+
+{% block title %} Edit post {% endblock %}
+
+{% block content %}
+<h2>Edit post</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="title" id="title" placeholder="Enter title:" value="{{ post.title }}">
+    <textarea name="content" id="content" placeholder="Enter blog content here:">{{ post.content }}</textarea>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Save changes</button>
+</form>
+{% endblock %}

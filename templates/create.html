@@ -1,0 +1,16 @@
+{% extends 'navbar.html' %}
+
+{% block title %} Create Post {% endblock %}
+
+{% block content %}
+<h2>Create post </h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="title" id="title" placeholder="Enter title:">
+    <textarea name="content" id="content" placeholder="Enter blog content here:"></textarea>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
